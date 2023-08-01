@@ -1,0 +1,48 @@
+.input{
+    display: flex;
+    width: 90%;
+    position: relative; /* because we need to put button inside the input box*/
+    align-items: center;
+}
+
+.input__box {
+    width: 100%;
+    border-radius: 50px;
+    padding: 20px 30px;
+    font-size: 25px;
+    border: none;
+    transition: 0.2s;
+    box-shadow: inset 0 0 5px black;
+  }
+
+  /*When click on the input field, background turns dark */
+  .input__box:focus {
+    box-shadow: 0 0 10px 1000px rgba(0, 0, 0, 0.5);
+    outline: none;
+  }
+
+  /* button */
+  .input_submit {
+    position: absolute; /*position inside the input field*/
+    width: 50px;
+    height: 50px;
+    margin: 12px;
+    border-radius: 50px;
+    right: 0px; /*align to the right*/
+    border: none;
+    font-size: 15px;
+    background-color: #823329;
+    color: white;
+    transition: 0.2s all;
+    box-shadow: 0 0 10px black;
+  }
+
+  .input_submit:hover {
+    background-color: #A4564C;
+  }
+
+  /*Click Animation*/
+  .input_submit:active {
+    transform: scale(0.8);
+    box-shadow: 0 0 5px black;
+  }
