@@ -46,3 +46,48 @@
     transform: scale(0.8);
     box-shadow: 0 0 5px black;
   }
+  /* Make the the todo items are wrapped in its own line*/
+  .todos {
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    width: 47.5%;
+    padding: 15px;
+  }
+/* Style SingleTodo Card */
+  .todos__single {
+    display: flex;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 15px;
+    background-image: url("https://img.freepik.com/free-photo/crumpled-yellow-paper-background-close-up_60487-2390.jpg?size=626&ext=jpg");
+    transition: 0.2s;
+  }
+  
+  .todos__single--text {
+    flex: 1;
+    padding: 5px;
+    border: none;
+    font-size: 20px;
+  }
+  
+  .icon {
+    margin-left: 10px;
+    font-size: 25px;
+    cursor: pointer;
+    right: 0px; /*align to the right*/
+  }
+
+  @media (max-width: 700px) {
+    .input {
+      width: 95%;
+    }
+    .container {
+      width: 95%;
+      flex-direction: column;
+    }
+    .todos {
+      width: 95%;
+      margin-bottom: 10px;
+    }
+  }
