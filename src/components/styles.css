@@ -1,6 +1,6 @@
 .input{
     display: flex;
-    width: 90%;
+    width: 95%;
     position: relative; /* because we need to put button inside the input box*/
     align-items: center;
 }
@@ -21,7 +21,7 @@
     outline: none;
   }
 
-  /* button */
+  /* Go button */
   .input_submit {
     position: absolute; /*position inside the input field*/
     width: 50px;
@@ -31,6 +31,7 @@
     right: 0px; /*align to the right*/
     border: none;
     font-size: 15px;
+    font-weight: bold;
     background-color: #823329;
     color: white;
     transition: 0.2s all;
@@ -46,6 +47,16 @@
     transform: scale(0.8);
     box-shadow: 0 0 5px black;
   }
+
+  /* TodoList.tsx: Two side styling for completed and active tasks container */
+  .container{
+    display: flex;
+    width: 95%;
+    margin-top: 10px;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
   /* Make the the todo items are wrapped in its own line*/
   .todos {
     border-radius: 5px;
@@ -53,6 +64,19 @@
     flex-direction: column;
     width: 47.5%;
     padding: 15px;
+    background-color:#CFD2B2; /* pearl green */
+  }
+
+  .remove{
+    background-color: #BFBAB1; /*silver for the completed tasks background*/
+  }
+
+  .dragactive {
+    background-color: #C3C6AB; /* darker pearl green */
+  }
+
+  .todos__heading {
+    font-size:30px;
   }
 /* Style SingleTodo Card */
   .todos__single {
@@ -60,8 +84,13 @@
     border-radius: 5px;
     padding: 20px;
     margin-top: 15px;
-    background-image: url("https://img.freepik.com/free-photo/crumpled-yellow-paper-background-close-up_60487-2390.jpg?size=626&ext=jpg");
+    background-image: url("https://img.freepik.com/free-photo/design-space-paper-textured-background_53876-41740.jpg?w=826&t=st=1691265558~exp=1691266158~hmac=1228952acd1f51ca1f13f82e82dfa838bd60884fcf552bc65314b8219e91a38d");
     transition: 0.2s;
+  }
+
+  .todos__single:hover{
+    box-shadow: 0 0 5px black;
+    transform: scale(1.03);
   }
   
   .todos__single--text {
