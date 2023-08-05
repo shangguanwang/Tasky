@@ -23,6 +23,7 @@ Users can
 💆‍♀️ <b>Challenges I Faced</b>: This is my first project in TypeScript, so it takes some effort to specify types for every useState and function.
 <br>
 😊 <b>What's fun</b>: Implementing the drag and drop feature using the react-beautiful-dnd npm package has been super fun. I'm a big fan of combo board and it's more smooth from a UI perspective to move completed tasks to a different column.
+<br>
 📕 <b>Learning resources</b>: I want to thank RoadsideCoder for his amazing <a href="https://www.youtube.com/@RoadsideCoder" target="_blank">tutorial</a>.
 
 ### How to use:
