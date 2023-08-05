@@ -2,6 +2,7 @@
 
 Tasky is a todolist app that allows users to manage their daily tasks.
 See the site live at <a href="https://tasky2023.netlify.app/" target="_blank">Netlify</a>
+![Tasky Screenshot](https://github.com/shangguanwang/Tasky/assets/24996005/9448b9df-8cf7-45b6-82de-fab987d2e190)
 
 ### Summary
 
