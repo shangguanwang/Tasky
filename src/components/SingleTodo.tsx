@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Todo } from '../model';
 import {AiFillEdit, AiFillDelete} from 'react-icons/ai';
 import {MdDone} from 'react-icons/md';
@@ -36,11 +36,18 @@ const SingleTodo = ({todo, todos, setTodos}:Props) => {
             todo.id===id?{...todo, todo:editTodo}:todo)))
         setEdit(false);
     }
+    /* Make the cursor starts inside the input box */
+    const inputRef = useRef<HTMLInputElement>(null);
+
+    useEffect(()=>{
+        inputRef.current?.focus();
+    },[edit])
+
     return (
         /* If the edit mode is on, we display the input box, else display todo */
     <form className="todos__single" onSubmit={(e)=>handleEdit(e, todo.id)}>
         { edit ? (
-            <input value={editTodo} onChange={(e)=>setEditTodo(e.target.value)} className="todos__single--text"/> /* display the original todo text, As a user types, reflect immediately in the field */
+            <input ref = {inputRef} value={editTodo} onChange={(e)=>setEditTodo(e.target.value)} className="todos__single--text"/> /* display the original todo text, As a user types, reflect immediately in the field */
             ):(
             /* Display Todo differently depending on isDone value */
             todo.isDone ? (
